@@ -1,0 +1,27 @@
+{
+  "name": "bulma-custom",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run build:sass && npm run watch:sass && npm run dev-server",
+    "watch:sass": "node-sass -w -r --output-style compressed sass/index.scss public/stylesheets/bulma.css &",
+    "build:sass": "node-sass --output-style compressed sass/index.scss public/stylesheets/bulma.css",
+    "dev-server": "DEBUG=bulma-custom:* nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "express-react-views": "^0.10.2",
+    "morgan": "~1.7.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "bulma": "^0.2.1",
+    "node-sass": "^3.10.1",
+    "nodemon": "^1.10.2"
+  }
+}
